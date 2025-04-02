@@ -14,7 +14,7 @@ function HowToPlayModal({ onClose }) {
             {/* The content div prevents click propagation */}
             <div className="modal-content" onClick={handleModalContentClick}>
                 <button className="modal-close-button" onClick={onClose} aria-label="Close How to Play">×</button>
-                <h2>How to Play: Shoot The Duck</h2>
+                <h2>How to Play: Shoot The Ducks</h2>
 
                 <div className="instructions">
                     <p>🦆 Ducks will fly up from the bottom of the screen.</p>
