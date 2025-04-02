@@ -1,0 +1,52 @@
+/* src/components/Header.css */
+.app-header {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: var(--secondary-color); /* Match footer background */
+    border-bottom: 1px solid var(--border-color); /* Match footer border */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-color);
+    z-index: 10; /* Keep above game area, below modals/pause */
+    flex-shrink: 0; /* Prevent header from shrinking */
+}
+
+.app-header .game-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-color); /* Use accent for title */
+    margin: 0;
+}
+
+.app-header .author-name {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--text-color-secondary); /* Lighter text for author */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .app-header {
+        padding: 8px 15px;
+    }
+    .app-header .game-title {
+        font-size: 1.1rem;
+    }
+    .app-header .author-name {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-header {
+        flex-direction: column; /* Stack on very small screens */
+        gap: 3px;
+        padding: 5px 10px;
+    }
+     .app-header .game-title {
+        font-size: 1rem;
+    }
+}
+
+/* Created by Ram Bapat, www.linkedin.com/in/ram-bapat-barrsum-diamos */

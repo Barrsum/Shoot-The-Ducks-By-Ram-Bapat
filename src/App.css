@@ -1,0 +1,40 @@
+/* src/App.css */
+.App {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column; /* Stack Header, Main, Footer */
+  /* justify-content: center; Align items vertically */
+  align-items: center; /* Center items horizontally */
+  position: relative;
+  background: linear-gradient(to bottom, var(--background-gradient-dark), var(--background-gradient-light));
+  overflow: hidden; /* Important to contain game area */
+  border: 2px solid var(--border-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  color: var(--text-color); /* Default text color */
+}
+
+/* Make the main content area take up the available space */
+.main-content {
+  flex-grow: 1; /* Allows this element to grow and fill space */
+  width: 100%; /* Take full width */
+  position: relative; /* Needed for absolute positioning within GameScreen */
+  overflow: hidden; /* Hide anything that overflows the game area */
+  display: flex; /* Ensure content inside centers if needed */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Remove the specific h1 styling from App.css, let screen components handle titles */
+/* .App h1 { ... } */
+
+/* Media queries can remain if needed for global button styles etc. */
+@media (max-width: 768px) {
+button {
+  font-size: 0.9rem;
+  padding: 8px 16px;
+}
+}
+
+/* Created by Ram Bapat, www.linkedin.com/in/ram-bapat-barrsum-diamos */

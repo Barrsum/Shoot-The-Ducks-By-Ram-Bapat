@@ -1,0 +1,61 @@
+/* src/components/Footer.css */
+.app-footer {
+    width: 100%;
+    padding: 15px 25px; /* Slightly less padding */
+    /* margin-top: auto; */ /* Let App.css handle positioning */
+    background-color: var(--secondary-color);
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    color: var(--text-color-secondary); /* Use secondary text color */
+    font-size: 0.85rem; /* Slightly smaller base font */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    gap: 8px; /* Space between footer elements */
+    z-index: 10; /* Ensure it's above game area if overlapping needed, but below modals */
+    flex-shrink: 0; /* Prevent footer from shrinking */
+  }
+
+  .app-footer p {
+      margin: 0;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 25px; /* More space between icons */
+  }
+
+  .social-links a {
+    color: var(--text-color-secondary); /* Use secondary text color */
+    font-size: 1.4rem; /* Slightly smaller icons */
+    transition: color 0.2s ease, transform 0.2s ease;
+    opacity: 0.7;
+  }
+
+  .social-links a:hover {
+    color: var(--primary-color); /* Highlight with primary color on hover */
+    opacity: 1;
+    transform: scale(1.15); /* Slightly more enlarge icon on hover */
+  }
+
+  .connect-text {
+      font-size: 0.75rem; /* Smaller text */
+      font-style: italic;
+      opacity: 0.6;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 480px) {
+    .app-footer {
+        padding: 10px 15px;
+        gap: 5px;
+    }
+     .social-links a {
+        font-size: 1.3rem;
+     }
+     .connect-text {
+         font-size: 0.7rem;
+     }
+  }
+
+  /* Created by Ram Bapat, www.linkedin.com/in/ram-bapat-barrsum-diamos */

@@ -1,0 +1,161 @@
+/* src/components/GameOverScreen.css - Style V2 (Themed) */
+.game-over-screen.game-over-v2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 30px;
+  text-align: center;
+  /* Keep the darker background for contrast */
+  background: linear-gradient(to bottom, #11151a, #222831);
+  color: var(--text-color);
+}
+
+.game-over-title-v2 {
+  font-size: 4rem;
+  font-weight: 700;
+  /* Change color to primary green */
+  color: var(--primary-color);
+  letter-spacing: 5px;
+  margin-bottom: 40px;
+  /* Change shadow and border color */
+  text-shadow: 2px 2px 5px rgba(0, 100, 0, 0.4); /* Greenish shadow */
+  border-bottom: 2px solid rgba(76, 175, 80, 0.4); /* Subtle green underline */
+  padding-bottom: 10px;
+}
+
+.final-score-panel-v2 {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 20px 40px;
+  margin-bottom: 50px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.final-score-label-v2 {
+  font-size: 1.1rem;
+  color: var(--text-color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.final-score-value-v2 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  /* Keep score value green */
+  color: var(--primary-color);
+  line-height: 1.1;
+}
+
+.game-over-buttons-v2 {
+  display: flex;
+  gap: 20px;
+}
+
+.game-over-btn-v2 {
+  padding: 10px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Replay button already uses primary green */
+.game-over-btn-v2.replay-btn {
+  background-color: transparent;
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+.game-over-btn-v2.replay-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  transform: scale(1.05);
+}
+
+/* Home button remains grey/secondary */
+.game-over-btn-v2.home-btn {
+  background-color: transparent;
+  border-color: var(--text-color-secondary);
+  color: var(--text-color-secondary);
+}
+.game-over-btn-v2.home-btn:hover {
+  background-color: var(--text-color-secondary);
+  color: var(--background-dark);
+  transform: scale(1.05);
+}
+
+
+/* Pop-in animation remains the same */
+.animate-pop-in {
+animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+opacity: 0;
+transform: scale(0.8);
+}
+
+@keyframes popIn {
+0% {
+  opacity: 0;
+  transform: scale(0.8);
+}
+100% {
+  opacity: 1;
+  transform: scale(1);
+}
+}
+
+
+/* Responsive adjustments remain the same */
+@media (max-width: 768px) {
+.game-over-title-v2 {
+  font-size: 3rem;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+.final-score-panel-v2 {
+   padding: 15px 30px;
+   margin-bottom: 40px;
+}
+.final-score-label-v2 {
+  font-size: 0.9rem;
+}
+.final-score-value-v2 {
+  font-size: 2.8rem;
+}
+ .game-over-buttons-v2 {
+     flex-direction: column; /* Stack buttons */
+     gap: 15px;
+     width: 70%;
+     max-width: 250px;
+ }
+ .game-over-btn-v2 {
+     width: 100%; /* Full width */
+     font-size: 0.9rem;
+     padding: 10px 20px;
+ }
+}
+
+@media (max-width: 480px) {
+.game-over-screen.game-over-v2 {
+    padding: 20px;
+}
+.game-over-title-v2 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+.final-score-value-v2 {
+  font-size: 2.5rem;
+}
+}
+
+/* Created by Ram Bapat, www.linkedin.com/in/ram-bapat-barrsum-diamos */

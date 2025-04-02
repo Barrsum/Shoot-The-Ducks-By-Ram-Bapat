@@ -1,0 +1,65 @@
+/* src/index.css */
+
+/* Define color variables for the theme */
+:root {
+  --primary-color: #4CAF50; /* Accent Green */
+  --secondary-color: #1f1f1f; /* Slightly lighter dark for elements */
+  --background-dark: #1a1a1a;
+  --background-gradient-dark: #0f0f0f;
+  --background-gradient-light: #2b2b2b;
+  --text-color: #f0f0f0;
+  --text-color-secondary: #aaa;
+  --border-color: #444;
+  --shadow-color: rgba(0, 0, 0, 0.7);
+  --hover-color: #45a049;
+  --button-text-color: white;
+}
+
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Or choose another modern font */
+}
+
+body {
+  background-color: var(--background-dark);
+  color: var(--text-color);
+  overflow: hidden; /* Prevent scrollbars */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+   width: 100%;
+   height: 100vh; /* Ensure root takes full height */
+   max-width: 1200px; /* Max width for desktop */
+   margin: 0 auto; /* Center the container */
+   display: flex; /* Make root a flex container */
+   flex-direction: column; /* Stack children vertically */
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--hover-color);
+}
+
+button:active {
+   transform: scale(0.98);
+}
+
+/* Created by Ram Bapat, www.linkedin.com/in/ram-bapat-barrsum-diamos */

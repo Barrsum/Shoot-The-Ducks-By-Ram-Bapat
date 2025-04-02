@@ -1,0 +1,103 @@
+/* src/components/Duck.css */
+.duck {
+    position: absolute; /* Crucial for positioning */
+    width: 50px;
+    height: 50px;
+    cursor: pointer; /* Indicate it's clickable */
+    user-select: none; /* Prevent text selection */
+    transition: left 0.016s linear, top 0.016s linear; /* Smooth movement (matches ~60fps) */
+    will-change: transform, left, top; /* Performance hint */
+  }
+  
+  .duck-body {
+      width: 100%;
+      height: 100%;
+      background-color: #f1c40f; /* Yellowish duck color */
+      border: 2px solid #c0392b; /* Reddish outline */
+      border-radius: 50% 50% 40% 40% / 60% 60% 40% 40%; /* Simple duck shape */
+      box-shadow: inset -3px -3px 5px rgba(0,0,0,0.3);
+      /* Add pseudo-elements for wings/head later if desired */
+  }
+  
+   /* Simple wing */
+  .duck-body::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 15px;
+      background-color: #e67e22; /* Orange wing */
+      border-radius: 50%;
+      top: 20px;
+      right: -5px;
+      transform: rotate(-30deg);
+  }
+  
+  
+  /* Styles when the duck is shot */
+  .duck.shot {
+    pointer-events: none; /* Not clickable anymore */
+  }
+  
+  /* Explosion Effect */
+  .duck.explosion .duck-body {
+      display: none; /* Hide the duck body during explosion */
+  }
+  
+  .duck.explosion {
+    /* Using a pseudo-element for the explosion */
+    width: 60px; /* Explosion size */
+    height: 60px;
+    background-color: transparent; /* No background for the container */
+    border: none;
+    animation: explode 0.3s ease-out forwards;
+    /* Center the explosion animation */
+     transform: translate(-5px, -5px); /* Adjust if needed based on duck size */
+  }
+  
+  .duck.explosion::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, orange 20%, yellow 50%, transparent 70%);
+    border-radius: 50%;
+    opacity: 0.8;
+  }
+  
+  
+  /* Explosion Keyframes */
+  @keyframes explode {
+    0% {
+      transform: scale(0.5);
+      opacity: 1;
+    }
+     50% {
+         transform: scale(1.2);
+         opacity: 0.7;
+     }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+  
+  /* Responsive Duck Size (Optional) */
+   @media (max-width: 768px) {
+      .duck {
+          width: 40px;
+          height: 40px;
+      }
+      .duck-body::after { /* Adjust wing size/pos */
+           width: 20px;
+           height: 12px;
+           top: 15px;
+      }
+       .duck.explosion {
+           width: 50px;
+           height: 50px;
+       }
+   }
+
+   /* Created by Ram Bapat, www.linkedin.com/in/ram-bapat-barrsum-diamos */

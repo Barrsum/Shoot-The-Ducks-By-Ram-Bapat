@@ -1,0 +1,74 @@
+/* src/components/GameScreen.css */
+.game-screen {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: url('/target.png') 16 16, crosshair;
+    background: linear-gradient(to top, #3a5a78, #1a2a3a);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+  
+    /* --- Lines for mobile touch --- */
+    touch-action: manipulation; /* Disable double-tap zoom, allow other gestures if needed elsewhere */
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight overlay */
+    /* --- End of added lines --- */
+  }
+  
+  /* Head-Up Display (Score, Lives) */
+  .hud {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--text-color); /* Use variable */
+    text-shadow: 1px 1px 3px var(--shadow-color); /* Use variable */
+    z-index: 10; /* Above ducks, below pause menu/modals */
+  }
+  
+  .hud .score {
+    font-weight: bold;
+  }
+  
+  .hud .lives {
+      font-size: 1.8rem;
+  }
+  
+  /* Style for the Pause Button */
+  .pause-button {
+    padding: 5px 10px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--text-color); /* Use variable */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    pointer-events: auto; /* This is default, but keep for clarity if desired */
+  }
+  
+  .pause-button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  
+  
+  
+  @media (max-width: 768px) {
+    .hud {
+      font-size: 1.2rem;
+    }
+     .hud .lives {
+         font-size: 1.5rem;
+     }
+     .pause-button {
+          font-size: 0.9rem;
+          padding: 4px 8px;
+      }
+  }
+
+
+  /* Created by Ram Bapat, www.linkedin.com/in/ram-bapat-barrsum-diamos */

@@ -1,0 +1,113 @@
+/* src/components/StartScreen.css */
+.start-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    /* Optional: Add a subtle background pattern or image */
+    /* background-image: url('/path/to/start-bg.png'); */
+    background-size: cover;
+  }
+  
+  .start-title {
+    font-size: 4.5rem; /* Larger title */
+    color: var(--primary-color); /* Green accent */
+    margin-bottom: 15px; /* Space below title */
+    text-shadow: 4px 4px 8px var(--shadow-color); /* More pronounced shadow */
+    font-weight: 700; /* Bolder font */
+    letter-spacing: 1px; /* Slight spacing */
+    line-height: 1.1;
+  }
+  
+  .start-author {
+    font-size: 1.4rem; /* More prominent author text */
+    color: var(--text-color-secondary); /* Lighter grey */
+    margin-bottom: 50px; /* More space before buttons */
+    font-style: italic;
+    opacity: 0.9;
+  }
+  
+  .start-button-container {
+    display: flex;
+    gap: 25px; /* Space between buttons */
+  }
+  
+  .start-button {
+      padding: 12px 30px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: all 0.2s ease-out;
+  }
+  
+  .start-button:hover {
+      transform: translateY(-2px); /* Slight lift on hover */
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  }
+  
+  .start-button.secondary {
+      background-color: #555; /* Dark grey for secondary button */
+      color: var(--text-color);
+  }
+  .start-button.secondary:hover {
+       background-color: #666;
+  }
+  
+  
+  /* Simple fade-in animation */
+  .animate-fade-in {
+    animation: fadeInStart 0.8s ease-out forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fadeInStart {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .start-title {
+      font-size: 3.5rem;
+    }
+    .start-author {
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+    }
+    .start-button-container {
+      flex-direction: column; /* Stack buttons vertically */
+      gap: 15px;
+      width: 80%; /* Limit button width */
+      max-width: 300px;
+    }
+     .start-button {
+          font-size: 1.1rem;
+          padding: 10px 25px;
+          width: 100%; /* Make buttons full width of container */
+     }
+  }
+  
+  @media (max-width: 480px) {
+    .start-title {
+      font-size: 2.5rem;
+      text-shadow: 3px 3px 6px var(--shadow-color);
+    }
+     .start-author {
+      font-size: 1rem;
+    }
+     .start-button {
+         font-size: 1rem;
+     }
+  }
+
+  /* Created by Ram Bapat, www.linkedin.com/in/ram-bapat-barrsum-diamos */
