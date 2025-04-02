@@ -1,6 +1,6 @@
 # Shoot The Ducks - Modern React Duck Hunt Game 🎯🦆
 
-## Try live demo - [Demo]()
+## Try live demo - [Demo](https://shoot-the-ducks-by-ram-bapat.vercel.app/)
 
 A modern, dark-themed remake of the classic Duck Hunt game, built with React and Vite, optimized for both desktop (mouse) and mobile/tablet (touch) interactions. Developed as part of the **#30DaysOfVibeCoding** challenge.
 
